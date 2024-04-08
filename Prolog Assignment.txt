@@ -1,0 +1,67 @@
+WeChat: cstutorcs
+QQ: 749389476
+Email: tutorcs@163.com
+Prolog Assignment
+You will be writing the entire Prolog file. I will
+provide my really_go_now update to help you
+with how that predicate can get its data from the
+lists that are passed around. I called my primary
+predicate packing_list but you are free to call
+yours something else. I will be simply running your
+single file with an input and output file.
+Input
+As stated above, the input will be a list of items and
+a capacity. For simplicity, the capacity will be listed
+first in the input file with the list of items after. Here
+is a sample:
+10 [[sweater, 9], [book, 6], [skirt, 8], [gla
+9 [[jacket, 5], [umbrella, 8]]
+2 [[shirt,6], [phone, 6] , [belt, 8] , [hat, 9]
+The items are represented as a list of lists. The head
+of the inner list is the name of the item, and the only
+item in the tail of the inner list is the size of that
+item. The capacity and item list are random and the
+list can be in any order. The inner lists will always be
+item name and size.
+
+Output
+For the given input, this is the required output:
+Capacity: 10 Items to pack: [[sweater, 9
+Capacity:
+9 Items to pack: [[jacket, 5]
+Capacity: 2 Items to pack: [[shirt, 6],
+The first word in the output is "Capacity." and then
+then given capacity is output. After that are the
+words, "Items to pack:" and then any potential list
+from your predicate is output. You can see for the
+3rd input, there is nothing that can be packed. I
+recommend that you sort your list as I show in the
+given really_ go_now predicate so that your
+output will match.
+Implementation ideas
+When I was thinking about how to approach this
+problem, I wrote my packing_list predicate to
+return a single list. Then I knew I could
+use findall to repeat that single predicate to get
+all of my lists.
+My packing_list calls a helper that uses an
+empty list to build a scratch list. This way, I can take
+
+Running and Testing
+Running this will be a lot like the homework. I
+would recommend using the repl swipl while you
+are working on your individual predicates. Then
+once you have them working you can run the entire
+file on the commandline using
+swipl project3.pl input. txt output. txt
+Then I would diff your output and my output to see
+where they match.
+Files
+really_go_now.pl
+input.txt-output.txt
+input-2.txt - output-2.txt
+really_ go_now
+Here's what's in the file for reference. I would
+recommend downloading the file since it will retain
+the indentation. Then copy and paste that into your
+single solution file.
